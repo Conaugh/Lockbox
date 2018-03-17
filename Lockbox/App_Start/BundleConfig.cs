@@ -9,6 +9,9 @@ namespace Lockbox
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+                        "~/Scripts/popper*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/popper").Include(
                         "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -24,7 +27,7 @@ namespace Lockbox
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap*",
                       "~/Content/site.css"));
         }
     }
